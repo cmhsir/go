@@ -1,0 +1,110 @@
+[Stack]
+FillEnabled=0
+OverflowWarningsEnabled=1
+WarningThreshold=90
+SpWarningsEnabled=1
+WarnLogOnly=1
+UseTrigger=1
+TriggerName=main
+LimitSize=0
+ByteLimit=50
+[DebugChecksum]
+Checksum=1878696427
+[Exceptions]
+StopOnUncaught=_ 0
+StopOnThrow=_ 0
+[CallStack]
+ShowArgs=0
+[Disassembly]
+MixedMode=1
+[InterruptLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[Interrupts]
+Enabled=1
+[MemoryMap]
+Enabled=0
+Base=0
+UseAuto=0
+TypeViolation=1
+UnspecRange=1
+ActionState=1
+[JLinkDriver]
+TraceBufferSize=0x00010000
+TraceStallIfFIFOFull=0x00000000
+TracePortSize=0x00000004
+[Trace1]
+Enabled=0
+ShowSource=1
+[PlDriver]
+MemConfigValue=C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\arm\CONFIG\debugger\Freescale\MK60DN512Zxxx10.ddf
+FirstRun=0
+[Jet]
+DisableInterrupts=0
+MultiCoreRunAll=0
+JetConnSerialNo=00007
+JetConnFoundProbes=
+OnlineReset=Software
+PrevWtdReset=Custom
+[ArmDriver]
+EnableCache=1
+[SWOManager]
+SamplingDivider=8192
+OverrideClock=0
+CpuClock=-1
+SwoClock=-2
+DataLogMode=0
+ItmPortsEnabled=63
+ItmTermIOPorts=1
+ItmLogPorts=0
+ItmLogFile=$PROJ_DIR$\ITM.log
+PowerForcePC=1
+PowerConnectPC=1
+[Trace2]
+Enabled=0
+ShowSource=0
+[SWOTraceWindow]
+ForcedPcSampling=0
+ForcedInterruptLogs=0
+ForcedItmLogs=0
+EventCPI=0
+EventEXC=0
+EventFOLD=0
+EventLSU=0
+EventSLEEP=0
+[CallStackLog]
+Enabled=0
+[Log file]
+LoggingEnabled=_ 0
+LogFile=_ ""
+Category=_ 0
+[TermIOLog]
+LoggingEnabled=_ 0
+LogFile=_ ""
+[DriverProfiling]
+Enabled=0
+Mode=0
+Graph=0
+Symbiont=0
+Exclusions=
+[Disassemble mode]
+mode=0
+[Breakpoints2]
+Count=0
+[Aliases]
+A0=_ "C:\Documents and Settings\Administrator\桌面\定位眼附送资料v1.0\02-测试程序\01-定位眼摄像头图像采集程序\DMA.c" "E:\TM\定位眼附送资料v1.1\1.02-定位眼附送资料v1.1\02-测试程序\01-定位眼摄像头图像采集程序\DMA.c"
+A1=_ "C:\Users\Administrator\Desktop\岱默科技视频教程\17.摄像头组集成主板资源讲解之O7620数字摄像头模块\OV7620摄像头数据采集\K60C车主板UART测试_DMA传输例子成功\DMA.c" ""
+A2=_ "C:\Users\Administrator\Desktop\岱默科技视频教程\17.摄像头组集成主板资源讲解之O7620数字摄像头模块\OV7620摄像头数据采集\K60C车主板UART测试_DMA传输例子成功\exti.c" ""
+A3=_ "C:\Users\Administrator\Desktop\岱默科技视频教程\17.摄像头组集成主板资源讲解之O7620数字摄像头模块\OV7620摄像头数据采集\K60C车主板UART测试_DMA传输例子成功\main.c" ""
+A4=_ "C:\Users\Administrator\Desktop\岱默科技视频教程\岱默主板\岱默摄像头C车主板资料\K60C车主板各子模块例程\K60C车主板__OV7620摄像头OK\DMA.c" ""
+A5=_ "D:\飞思卡尔\go 双电机\DMA.c" "D:\飞思卡尔\go\DMA.c"
+A6=_ "D:\飞思卡尔\go 双电机\common\_printf.c" ""
+A7=_ "D:\飞思卡尔\go 双电机\common\vectors.c" "D:\飞思卡尔\go\common\vectors.c"
+A8=_ "D:\飞思卡尔\go 双电机\exti.c" ""
+A9=_ "D:\飞思卡尔\go\DMA.c" ""
+Count=10
+SuppressDialog=1
