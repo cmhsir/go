@@ -12,25 +12,25 @@
 
 #define INIT 0
 
-#define LED_SCL_Init  Gpio_init(PORT_A,14,1,INIT) // 时钟初始化定义
+#define LED_SCL_Init  Gpio_init(PORT_E,5,1,INIT) // 时钟初始化定义D0
 
-#define LED_SDA_Init  Gpio_init(PORT_A,13,1,INIT)//数据口D0
+#define LED_SDA_Init  Gpio_init(PORT_E,2,1,INIT)//数据口D0      //D1
 
-#define LED_RST_Init  Gpio_init(PORT_A,15,1,INIT)//复位低能电平
+#define LED_RST_Init  Gpio_init(PORT_E,3,1,INIT)//复位低能电平
 
-#define LED_DC_Init   Gpio_init(PORT_A,29,1,INIT)//偏置常低
+#define LED_DC_Init   Gpio_init(PORT_E,6,1,INIT)//偏置常低
 
-#define LED_SCLH  Gpio_set(PORT_A,14,1)// 时钟定义 
-#define LED_SCLL  Gpio_set(PORT_A,14,0)
+#define LED_SCLH  Gpio_set(PORT_E,5,1)// 时钟定义 
+#define LED_SCLL  Gpio_set(PORT_E,5,0)
 
-#define LED_SDAH  Gpio_set(PORT_A,13,1)//数据口D0
-#define LED_SDAL  Gpio_set(PORT_A,13,0)
+#define LED_SDAH  Gpio_set(PORT_E,2,1)//数据口D0
+#define LED_SDAL  Gpio_set(PORT_E,2,0)
 
-#define LED_RSTH  Gpio_set(PORT_A,15,1)//复位低能电平
-#define LED_RSTL  Gpio_set(PORT_A,15,0)
+#define LED_RSTH  Gpio_set(PORT_E,3,1)//复位低能电平
+#define LED_RSTL  Gpio_set(PORT_E,3,0)
 
-#define LED_DCH   Gpio_set(PORT_A,29,1)
-#define LED_DCL   Gpio_set(PORT_A,29,0)//偏置常低
+#define LED_DCH   Gpio_set(PORT_E,6,1)
+#define LED_DCL   Gpio_set(PORT_E,6,0)//偏置常低
 
 /************************************************/
 

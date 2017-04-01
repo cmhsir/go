@@ -62,7 +62,7 @@ void main()
   //               Uart_SendByte(UART4,Pix_Data[m][n]);
   //            }
   //          }
-            LocatingEye_OriginalImage_FixedThreshold_OledPrint();//信标检测方式
+            //LocatingEye_OriginalImage_FixedThreshold_OledPrint();//信标检测方式
             EnableInterrupts;   
         } 
         //Uart_SendByte(UART4,Uart_Getch(UART4));  //测试串口
