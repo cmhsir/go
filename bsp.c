@@ -16,6 +16,14 @@ void BSP_init()
                   );
     
     PLL_Init();
+
+    //初始化PWM引脚，以及占空比
+    PWM_Init(PWM_PIN_PTA10,PWM_FRE_DIV_FACTOR_128,0);//设置引脚为A10，5.12ms,上升沿，转向舵机
+    PWM_Init(PWM_PIN_PTA6,PWM_FRE_DIV_FACTOR_64,0);//电机正1
+    PWM_Init(PWM_PIN_PTA7,PWM_FRE_DIV_FACTOR_64,0);//电机反1
+    PWM_Init(PWM_PIN_PTA8,PWM_FRE_DIV_FACTOR_64,0);//电机正2
+    PWM_Init(PWM_PIN_PTA9,PWM_FRE_DIV_FACTOR_64,0);//电机反2
+    PWM_Output(PWM_PIN_PTA10,695);//对中692，小右，大左，左满750，右满630，左右各差55
     
     //OLED初始化
     OLED_Init();
@@ -49,7 +57,7 @@ void BSP_init()
     Gpio_init(PORT_C,17,0,0);  // VSYN
     Gpio_init(PORT_C,16,0,0);  // HREF
     PORTC_PCR18|=PORT_PCR_IRQC(1);   
-    //DMA_transmit_init((void *)&GPIOD_PDIR, Pix_Data,COL,51);
+    //DMA_transmit_init((void *)&GPIOD_PDIR, Pix_Data,COL,51);//使用上位机显示时解除此屏蔽
     DMA_transmit_init((void *)&GPIOD_PDIR, Image_Sort_History[0],COL,51);
     
     //摄像头外部中断使能

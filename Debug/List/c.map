@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V7.30.3.8024/W32 for ARM                 01/Apr/2017  16:26:30
+# IAR ELF Linker V7.30.3.8024/W32 for ARM                 06/Apr/2017  13:11:31
 # Copyright 2007-2014 IAR Systems AB.
 #
 #    Output file  =  D:\·ÉË¼¿¨¶û\go\go\Debug\Exe\c.out
@@ -56,7 +56,7 @@ __SystemLibrary = DLib
   .noinit              ro code  0x00000410    0x3c  crt0.o [1]
                               - 0x0000044c    0x3c
 
-"P1", part 2 of 2:                          0x2da8
+"P1", part 2 of 2:                          0x2d68
   .text                ro code  0x0000044c   0xdaa  xprintffull.o [3]
   .text                ro code  0x000011f6    0x22  zero_init3.o [5]
   .text                ro code  0x00001218    0x16  strchr.o [5]
@@ -79,51 +79,53 @@ __SystemLibrary = DLib
   .text                ro code  0x00001cb0   0x598  PWM.o [1]
   .text                ro code  0x00002248   0x31e  oled.o [1]
   .text                ro code  0x00002568   0x150  GPIO.o [1]
-  .text                ro code  0x000026b8   0x288  _printf.o [1]
-  .text                ro code  0x00002940   0x270  vectors.o [1]
-  .text                ro code  0x00002bb0    0x24  printf.o [3]
-  .text                ro code  0x00002bd4   0x120  main.o [1]
-  .text                ro code  0x00002cf4   0x100  bsp.o [1]
-  Veneer               ro code  0x00002df4     0x8  - Linker created -
-  .text                ro code  0x00002dfc    0x84  MCG.o [1]
-  .text                ro code  0x00002e80    0xec  DMA.o [1]
-  .text                ro code  0x00002f6c    0x44  exti.o [1]
-  .text                ro code  0x00002fb0    0x6c  iarttio.o [6]
-  .text                ro code  0x0000301c     0x8  XShttio.o [3]
-  CodeRelocate                  0x00003024    0x50  <Block>
-    Initializer bytes  ro data  0x00003024    0x50  <for CodeRelocateRam-1>
-  .rodata              const    0x00003074    0x38  vectors.o [1]
-  .text                ro code  0x000030ac    0x28  putchar.o [3]
-  .text                ro code  0x000030d4    0x10  write.o [6]
-  .text                ro code  0x000030e4    0x1e  dwrite.o [6]
-  .text                ro code  0x00003102    0x20  iarwstd.o [6]
-  .text                ro code  0x00003122    0x22  iarwrite.o [6]
-  .text                ro code  0x00003144    0x28  data_init.o [5]
-  .iar.init_table      const    0x0000316c    0x10  - Linker created -
-  .text                ro code  0x0000317c    0x1a  cmain.o [5]
-  .text                ro code  0x00003196     0x4  low_level_init.o [3]
-  .text                ro code  0x0000319a     0x4  exit.o [3]
-  .text                ro code  0x000031a0     0xa  cexit.o [5]
-  .text                ro code  0x000031ac    0x14  exit.o [6]
-  .text                ro code  0x000031c0    0x16  xprout.o [3]
-  .text                ro code  0x000031d6     0xc  cstartup_M.o [5]
-  .vec2nd              ro code  0x000031e2     0x8  vectors.o [1]
-  .data_init                    0x000031ec     0x8  <Block>
-    Initializer bytes  ro data  0x000031ec     0x8  <for .data-1>
-                              - 0x000031f4  0x2da8
+  .text                ro code  0x000026b8   0x270  vectors.o [1]
+  .text                ro code  0x00002928    0x24  printf.o [3]
+  .text                ro code  0x0000294c   0x1f8  _printf.o [1]
+  .text                ro code  0x00002b44   0x13c  bsp.o [1]
+  Veneer               ro code  0x00002c80     0x8  - Linker created -
+  .text                ro code  0x00002c88    0x84  MCG.o [1]
+  .text                ro code  0x00002d0c    0xec  DMA.o [1]
+  .text                ro code  0x00002df8    0x44  exti.o [1]
+  .text                ro code  0x00002e3c   0x114  locatingEye.o [1]
+  .text                ro code  0x00002f50    0x6c  iarttio.o [6]
+  .text                ro code  0x00002fbc     0x8  XShttio.o [3]
+  CodeRelocate                  0x00002fc4    0x50  <Block>
+    Initializer bytes  ro data  0x00002fc4    0x50  <for CodeRelocateRam-1>
+  .rodata              const    0x00003014    0x38  vectors.o [1]
+  .text                ro code  0x0000304c    0x28  putchar.o [3]
+  .text                ro code  0x00003074    0x10  write.o [6]
+  .text                ro code  0x00003084    0x1e  dwrite.o [6]
+  .text                ro code  0x000030a2    0x20  iarwstd.o [6]
+  .text                ro code  0x000030c2    0x22  iarwrite.o [6]
+  .text                ro code  0x000030e4    0x28  data_init.o [5]
+  .iar.init_table      const    0x0000310c    0x10  - Linker created -
+  .text                ro code  0x0000311c    0x1c  main.o [1]
+  .text                ro code  0x00003138    0x1a  cmain.o [5]
+  .text                ro code  0x00003152     0x4  low_level_init.o [3]
+  .text                ro code  0x00003156     0x4  exit.o [3]
+  .text                ro code  0x0000315c     0xa  cexit.o [5]
+  .text                ro code  0x00003168    0x14  exit.o [6]
+  .text                ro code  0x0000317c    0x16  xprout.o [3]
+  .text                ro code  0x00003192     0xc  cstartup_M.o [5]
+  .data_init                    0x000031a0     0xc  <Block>
+    Initializer bytes  ro data  0x000031a0     0xc  <for .data-1>
+  .vec2nd              ro code  0x000031ac     0x8  vectors.o [1]
+                              - 0x000031b4  0x2d68
 
-"P2":                                       0x3ee0
+"P2":                                       0x3ee4
   CodeRelocateRam               0x1fff0410    0x50  <Block>
     CodeRelocateRam-1           0x1fff0410    0x50  <Init block>
       .textrw          inited   0x1fff0410    0x50  MCG.o [1]
-  .data                         0x1fff0460     0x8  <Block>
-    .data-1                     0x1fff0460     0x8  <Init block>
-      .data            inited   0x1fff0460     0x8  XShttio.o [3]
-  .bss                          0x1fff0468  0x3e88  <Block>
-    .bss               zero     0x1fff0468  0x3e80  locatingEye.o [1]
-    .bss               zero     0x1fff42e8     0x4  main.o [1]
-    .bss               zero     0x1fff42ec     0x1  main.o [1]
-                              - 0x1fff42f0  0x3ee0
+  .data                         0x1fff0460     0xc  <Block>
+    .data-1                     0x1fff0460     0xc  <Init block>
+      .data            inited   0x1fff0460     0x2  locatingEye.o [1]
+      .data            inited   0x1fff0464     0x8  XShttio.o [3]
+  .bss                          0x1fff046c  0x3e88  <Block>
+    .bss               zero     0x1fff046c  0x3e80  locatingEye.o [1]
+    .bss               zero     0x1fff42ec     0x4  main.o [1]
+    .bss               zero     0x1fff42f0     0x1  main.o [1]
+                              - 0x1fff42f4  0x3ee4
 
 
 *******************************************************************************
@@ -134,7 +136,7 @@ __SystemLibrary = DLib
           -------     ----
 Zero (__iar_zero_init3)
     1 destination range, total size 0x3e85:
-          0x1fff0468  0x3e85
+          0x1fff046c  0x3e85
 
 
 
@@ -149,23 +151,23 @@ D:\·ÉË¼¿¨¶û\go\go\Debug\Obj: [1]
     GPIO.o                     336
     MCG.o                      132       80       80
     PWM.o                    1 432
-    _printf.o                  648
-    bsp.o                      256
+    _printf.o                  504
+    bsp.o                      316
     crt0.o                      60
     exti.o                      68
-    locatingEye.o                                      16 000
-    main.o                     288                          5
+    locatingEye.o              276                 2   16 002
+    main.o                      28                          5
     oled.o                     798
     vectors.o                  632             1 096
     ---------------------------------------------------------
-    Total:                   4 886       80    1 176   16 005
+    Total:                   4 818       80    1 178   16 007
 
 command line: [2]
     ---------------------------------------------------------
     Total:
 
 dl7M_tln.a: [3]
-    XShttio.o                    8                 8        8
+    XShttio.o                    8                10        8
     div.o                       14
     exit.o                       4
     low_level_init.o             4
@@ -174,7 +176,7 @@ dl7M_tln.a: [3]
     xprintffull.o            3 498
     xprout.o                    22
     ---------------------------------------------------------
-    Total:                   3 626                 8        8
+    Total:                   3 626                10        8
 
 m7M_tl.a: [4]
     DblAdd.o                   212
@@ -215,10 +217,10 @@ shb_l.a: [6]
     ---------------------------------------------------------
     Total:                     240
 
-    Gaps                        20
+    Gaps                        20                          2
     Linker created               8                16
 -------------------------------------------------------------
-    Grand Total:            11 586       80    1 200   16 013
+    Grand Total:            11 518       80    1 204   16 017
 
 
 *******************************************************************************
@@ -227,27 +229,28 @@ shb_l.a: [6]
 
 Entry                      Address    Size  Type      Object
 -----                      -------    ----  ----      ------
-.bss$$Base              0x1fff0468           --   Gb  - Linker created -
-.bss$$Limit             0x1fff42f0           --   Gb  - Linker created -
+.bss$$Base              0x1fff046c           --   Gb  - Linker created -
+.bss$$Limit             0x1fff42f4           --   Gb  - Linker created -
 .data$$Base             0x1fff0460           --   Gb  - Linker created -
-.data$$Limit            0x1fff0468           --   Gb  - Linker created -
-.data_init$$Base        0x000031ec           --   Gb  - Linker created -
-.data_init$$Limit       0x000031f4           --   Gb  - Linker created -
-?main                   0x0000317d          Code  Gb  cmain.o [5]
-BSP_init                0x00002cf5   0x100  Code  Gb  bsp.o [1]
-CodeRelocate$$Base      0x00003024           --   Gb  - Linker created -
-CodeRelocate$$Limit     0x00003074           --   Gb  - Linker created -
+.data$$Limit            0x1fff046c           --   Gb  - Linker created -
+.data_init$$Base        0x000031a0           --   Gb  - Linker created -
+.data_init$$Limit       0x000031ac           --   Gb  - Linker created -
+?main                   0x00003139          Code  Gb  cmain.o [5]
+BSP_init                0x00002b45   0x13c  Code  Gb  bsp.o [1]
+CodeRelocate$$Base      0x00002fc4           --   Gb  - Linker created -
+CodeRelocate$$Limit     0x00003014           --   Gb  - Linker created -
 CodeRelocateRam$$Base   0x1fff0410           --   Gb  - Linker created -
 CodeRelocateRam$$Limit  0x1fff0460           --   Gb  - Linker created -
-DMA_CH1_Handler         0x00002abd    0x28  Code  Gb  vectors.o [1]
-DMA_transmit_init       0x00002e81    0xae  Code  Gb  DMA.o [1]
-DummyISR                0x00002aa1     0x2  Code  Gb  vectors.o [1]
+DMA_CH1_Handler         0x00002835    0x28  Code  Gb  vectors.o [1]
+DMA_transmit_init       0x00002d0d    0xae  Code  Gb  DMA.o [1]
+DummyISR                0x00002819     0x2  Code  Gb  vectors.o [1]
 Gpio_get_port_addr      0x00002617    0x3c  Code  Gb  GPIO.o [1]
 Gpio_get_pt_addr        0x00002653    0x3c  Code  Gb  GPIO.o [1]
 Gpio_init               0x00002569    0x80  Code  Gb  GPIO.o [1]
 Gpio_set                0x000025e9    0x2e  Code  Gb  GPIO.o [1]
-Image_Sort_History      0x1fff0468  0x3e80  Data  Gb  locatingEye.o [1]
-Is_SendPhoto            0x1fff42ec     0x1  Data  Gb  main.o [1]
+Image_Sort_History      0x1fff046c  0x3e80  Data  Gb  locatingEye.o [1]
+Is_SendPhoto            0x1fff42f0     0x1  Data  Gb  main.o [1]
+LCD_PrintImage          0x00002ebf    0x84  Code  Gb  locatingEye.o [1]
 LEDPIN_Init             0x00002249    0x34  Code  Gb  oled.o [1]
 LED_DLY_ms              0x0000239b    0x1a  Code  Gb  oled.o [1]
 LED_Fill                0x0000235b    0x40  Code  Gb  oled.o [1]
@@ -255,13 +258,15 @@ LED_Set_Pos             0x00002333    0x28  Code  Gb  oled.o [1]
 LED_WrCmd               0x000022d9    0x5a  Code  Gb  oled.o [1]
 LED_WrDat               0x0000227d    0x5a  Code  Gb  oled.o [1]
 LoadInt                 0x000009d3    0x6e  Code  Lc  xprintffull.o [3]
+LocatingEye_OriginalImage_FixedThreshold_OledPrint
+                        0x00002e3d    0x82  Code  Gb  locatingEye.o [1]
 OLED_Init               0x000024cd    0x9a  Code  Gb  oled.o [1]
-PLL_Init                0x00002dfd    0x84  Code  Gb  MCG.o [1]
-PORTC_Interrupt         0x00002ae5    0x58  Code  Gb  vectors.o [1]
+PLL_Init                0x00002c89    0x84  Code  Gb  MCG.o [1]
+PORTC_Interrupt         0x0000285d    0x58  Code  Gb  vectors.o [1]
 PWM_Init                0x00001cb1   0x374  Code  Gb  PWM.o [1]
 PWM_Output              0x00002025   0x1a6  Code  Gb  PWM.o [1]
-Region$$Table$$Base     0x0000316c           --   Gb  - Linker created -
-Region$$Table$$Limit    0x0000317c           --   Gb  - Linker created -
+Region$$Table$$Base     0x0000310c           --   Gb  - Linker created -
+Region$$Table$$Limit    0x0000311c           --   Gb  - Linker created -
 SetAddressingMode       0x000023b5    0x14  Code  Gb  oled.o [1]
 SetContrastControl      0x000023d9    0x14  Code  Gb  oled.o [1]
 SetStartLine            0x000023c9    0x10  Code  Gb  oled.o [1]
@@ -278,18 +283,16 @@ Set_Multiplex_Ratio     0x00002433    0x14  Code  Gb  oled.o [1]
 Set_Precharge_Period    0x0000248f    0x14  Code  Gb  oled.o [1]
 Set_Segment_Remap       0x00002403    0x10  Code  Gb  oled.o [1]
 Set_VCOMH               0x000024b9    0x14  Code  Gb  oled.o [1]
-Timer0_isr              0x00002aa3    0x1a  Code  Gb  vectors.o [1]
-UART_Init               0x000026b9   0x1a8  Code  Gb  _printf.o [1]
-Uart_Getch              0x000028a7    0x48  Code  Gb  _printf.o [1]
-Uart_SendByte           0x00002861    0x46  Code  Gb  _printf.o [1]
-VECTableInit            0x00002961    0x88  Code  Gb  vectors.o [1]
-V_Cnt                   0x1fff42e8     0x4  Data  Gb  main.o [1]
-WatchdogDisable         0x00002941    0x20  Code  Gb  vectors.o [1]
+Timer0_isr              0x0000281b    0x1a  Code  Gb  vectors.o [1]
+UART_Init               0x0000294d   0x1a8  Code  Gb  _printf.o [1]
+VECTableInit            0x000026d9    0x88  Code  Gb  vectors.o [1]
+V_Cnt                   0x1fff42ec     0x4  Data  Gb  main.o [1]
+WatchdogDisable         0x000026b9    0x20  Code  Gb  vectors.o [1]
 _GenldFull              0x00000f4b   0x264  Code  Lc  xprintffull.o [3]
 _LdtobFull              0x00000b49   0x3fc  Code  Lc  xprintffull.o [3]
 _LitobFull              0x00000a41   0x106  Code  Lc  xprintffull.o [3]
 _PrintfFull             0x0000044d   0x580  Code  Gb  xprintffull.o [3]
-_Prout                  0x000031c1    0x16  Code  Gb  xprout.o [3]
+_Prout                  0x0000317d    0x16  Code  Gb  xprout.o [3]
 _PutcharsFull           0x000011af    0x2e  Code  Lc  xprintffull.o [3]
 __BOOT_STACK_ADDRESS {Abs}
                         0x2000fff8           --   Gb  command line/config [2]
@@ -306,25 +309,25 @@ __aeabi_i2d             0x00001631          Code  Gb  I32ToDbl.o [4]
 __aeabi_ldiv0           0x00001bd9          Code  Gb  I64DivZer.o [5]
 __aeabi_ui2d            0x00001645          Code  Gb  I32ToDbl.o [4]
 __aeabi_uldivmod        0x000012c1          Code  Gb  I64DivMod.o [5]
-__cmain                 0x0000317d          Code  Gb  cmain.o [5]
-__dwrite                0x000030e5    0x1e  Code  Gb  dwrite.o [6]
-__exit                  0x000031ad    0x14  Code  Gb  exit.o [6]
+__cmain                 0x00003139          Code  Gb  cmain.o [5]
+__dwrite                0x00003085    0x1e  Code  Gb  dwrite.o [6]
+__exit                  0x00003169    0x14  Code  Gb  exit.o [6]
 __iar_Dnorm             0x00001427    0x42  Code  Gb  xdnorm.o [4]
 __iar_Dscale            0x000014c9   0x110  Code  Gb  xdscale.o [4]
 __iar_Memchr            0x00001269          Code  Gb  memchr.o [5]
 __iar_Strchr            0x00001219          Code  Gb  strchr.o [5]
-__iar_close_ttio        0x00002fb1    0x2e  Code  Gb  iarttio.o [6]
+__iar_close_ttio        0x00002f51    0x2e  Code  Gb  iarttio.o [6]
 __iar_d2uiz             0x00001611          Code  Gb  DblToI32.o [4]
 __iar_dadd              0x00001bdd          Code  Gb  DblAdd.o [4]
-__iar_data_init3        0x00003145    0x28  Code  Gb  data_init.o [5]
+__iar_data_init3        0x000030e5    0x28  Code  Gb  data_init.o [5]
 __iar_dsub              0x00001675          Code  Gb  DblSub.o [4]
 __iar_dsubStart         0x00001687          Code  Gb  DblSub.o [4]
-__iar_get_ttio          0x00002fe1    0x38  Code  Gb  iarttio.o [6]
-__iar_lookup_ttioh      0x0000301d     0x8  Code  Gb  XShttio.o [3]
-__iar_program_start     0x000031d7          Code  Gb  cstartup_M.o [5]
-__iar_sh_stdout         0x00003103    0x20  Code  Gb  iarwstd.o [6]
-__iar_sh_write          0x00003123    0x22  Code  Gb  iarwrite.o [6]
-__iar_ttio_handles      0x1fff0460     0x8  Data  Lc  XShttio.o [3]
+__iar_get_ttio          0x00002f81    0x38  Code  Gb  iarttio.o [6]
+__iar_lookup_ttioh      0x00002fbd     0x8  Code  Gb  XShttio.o [3]
+__iar_program_start     0x00003193          Code  Gb  cstartup_M.o [5]
+__iar_sh_stdout         0x000030a3    0x20  Code  Gb  iarwstd.o [6]
+__iar_sh_write          0x000030c3    0x22  Code  Gb  iarwrite.o [6]
+__iar_ttio_handles      0x1fff0464     0x8  Data  Lc  XShttio.o [3]
 __iar_ui2d              0x00001649          Code  Gb  I32ToDbl.o [4]
 __iar_unaligned___aeabi_memcpy
                         0x000013b1          Code  Gb  ABImemcpy_unaligned.o [5]
@@ -333,24 +336,25 @@ __iar_unaligned___aeabi_memcpy4
 __iar_unaligned___aeabi_memcpy8
                         0x000013d1          Code  Gb  ABImemcpy_unaligned.o [5]
 __iar_zero_init3        0x000011f7    0x22  Code  Gb  zero_init3.o [5]
-__low_level_init        0x00003197     0x4  Code  Gb  low_level_init.o [3]
+__low_level_init        0x00003153     0x4  Code  Gb  low_level_init.o [3]
 __startup               0x00000411          Code  Gb  crt0.o [1]
 __vector_table          0x00000000   0x410  Data  Gb  vectors.o [1]
-__write                 0x000030d5    0x10  Code  Gb  write.o [6]
-_call_main              0x00003189          Code  Gb  cmain.o [5]
-_exit                   0x000031a1          Code  Gb  cexit.o [5]
-_main                   0x00003193          Code  Gb  cmain.o [5]
-default_isr             0x000031e3     0x8  Code  Gb  vectors.o [1]
+__write                 0x00003075    0x10  Code  Gb  write.o [6]
+_call_main              0x00003145          Code  Gb  cmain.o [5]
+_exit                   0x0000315d          Code  Gb  cexit.o [5]
+_main                   0x0000314f          Code  Gb  cmain.o [5]
+default_isr             0x000031ad     0x8  Code  Gb  vectors.o [1]
 div                     0x00001bcb     0xe  Code  Gb  div.o [3]
-enable_irq              0x000029e9    0xb8  Code  Gb  vectors.o [1]
-exit                    0x0000319b     0x4  Code  Gb  exit.o [3]
-exti_init               0x00002f6d    0x44  Code  Gb  exti.o [1]
-main                    0x00002bd5   0x120  Code  Gb  main.o [1]
+enable_irq              0x00002761    0xb8  Code  Gb  vectors.o [1]
+exit                    0x00003157     0x4  Code  Gb  exit.o [3]
+exti_init               0x00002df9    0x44  Code  Gb  exti.o [1]
+main                    0x0000311d    0x18  Code  Gb  main.o [1]
 memchr                  0x00001269          Code  Gb  memchr.o [5]
-printf                  0x00002bb1    0x24  Code  Gb  printf.o [3]
-putchar                 0x000030ad    0x28  Code  Gb  putchar.o [3]
+printf                  0x00002929    0x24  Code  Gb  printf.o [3]
+putchar                 0x0000304d    0x28  Code  Gb  putchar.o [3]
 strchr                  0x00001219          Code  Gb  strchr.o [5]
 strlen                  0x00001231          Code  Gb  strlen.o [5]
+threshold               0x1fff0460     0x2  Data  Gb  locatingEye.o [1]
 
 
 [1] = D:\·ÉË¼¿¨¶û\go\go\Debug\Obj
@@ -360,10 +364,10 @@ strlen                  0x00001231          Code  Gb  strlen.o [5]
 [5] = rt7M_tl.a
 [6] = shb_l.a
 
-  11 586 bytes of readonly  code memory
+  11 518 bytes of readonly  code memory
       80 bytes of readwrite code memory
-   1 200 bytes of readonly  data memory
-  16 013 bytes of readwrite data memory
+   1 204 bytes of readonly  data memory
+  16 017 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

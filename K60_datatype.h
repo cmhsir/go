@@ -96,10 +96,10 @@ typedef unsigned short int	uint16; /* 16 bits */
 #define VAL_ERR              (1)
 
 
-
-//#define ROW   240
+//使用上位机显示时解除此屏蔽
+//#define ROW   240    //摄像头两个开关11
 //#define COL   320
-#define ROW   80
+#define ROW   80       //摄像头两个开关01
 #define COL   100
 
 

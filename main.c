@@ -20,86 +20,89 @@
 *  实验操作：打开摄像头上位机，设定行数和列数的值和K60_datatype.h文件中的宏定义一致
 *            波特率为115200，开始接收图像
 ****************************************************************************************************/
-//char Pix_Data[ROW][COL]={0};
+char Pix_Data[ROW][COL]={0};
 char Is_SendPhoto=0;
 int  V_Cnt=0;
-//void zhong(void);
-//{
-//  int temp；
-//    if(Uart_Getch(UART4))
-//      temp=Uart_Getch(UART4);
-//
-//}
+
+void go(void);
+void view(void);
 
 void main()
 { 
-//    int  m=0,n=0;
-    int i = 50;
-    u8 temp;
     BSP_init();
-    PWM_Init(PWM_PIN_PTA10,PWM_FRE_DIV_FACTOR_128,0);//设置引脚为A10，5.12ms,上升沿
-    PWM_Init(PWM_PIN_PTA6,PWM_FRE_DIV_FACTOR_64,0);
-    PWM_Init(PWM_PIN_PTA7,PWM_FRE_DIV_FACTOR_64,0);
-    PWM_Init(PWM_PIN_PTA8,PWM_FRE_DIV_FACTOR_64,0);
-    PWM_Init(PWM_PIN_PTA9,PWM_FRE_DIV_FACTOR_64,0);
-    PWM_Output(PWM_PIN_PTA10,695);//对中702，小右，大左，左满774，右满630，左右各差72
     while(1)
     {
-//      PWM_Output(PWM_PIN_PTA10,702);//对中702，小右，大左，左满774，右满630，左右各差72
-//      PWM_Output(PWM_PIN_PTA6,250);PWM_Output(PWM_PIN_PTA7,0);//左轮 最大250 A6 正转
-//      PWM_Output(PWM_PIN_PTA9,250);PWM_Output(PWM_PIN_PTA8,0);//右轮 最大250 A9 正转
         if(Is_SendPhoto)
         { 
             DisableInterrupts;
-  //          //发送一帧数据
-  //          Uart_SendByte(UART4,0xFF);//图像头   
-  //          for(m=0; m<ROW; m++)
-  //          {
-  //            for(n=0;n<COL ;n++)
-  //            {
-  //               if(Pix_Data[m][n] == 0xFF) 
-  //                 Pix_Data[m][n]--;
-  //               Uart_SendByte(UART4,Pix_Data[m][n]);
-  //            }
-  //          }
-            //LocatingEye_OriginalImage_FixedThreshold_OledPrint();//信标检测方式
+            //view();//上位机显示摄像头图片
+            LocatingEye_OriginalImage_FixedThreshold_OledPrint();//信标检测方式
             EnableInterrupts;   
-        } 
-        //Uart_SendByte(UART4,Uart_Getch(UART4));  //测试串口
-        temp = Uart_Getch(UART4);
-        Uart_SendByte(UART4,temp);
-        temp -= 48;
-        switch(temp)
-        {
-            case 0: PWM_Output(PWM_PIN_PTA10,695);//中
-                break;
-            case 1: PWM_Output(PWM_PIN_PTA10,760);//左
-                break;
-            case 2: PWM_Output(PWM_PIN_PTA10,630);//右
-                break;
-            case 3: 
-                if(i <= 240)//加速
-                {
-                    i += 10;
-                    PWM_Output(PWM_PIN_PTA6,i);PWM_Output(PWM_PIN_PTA7,0);
-                    PWM_Output(PWM_PIN_PTA9,i);PWM_Output(PWM_PIN_PTA8,0);
-                }
-                break;
-            case 4: 
-                if(i >= 50)//减速
-                {
-                    i -= 10;
-                    PWM_Output(PWM_PIN_PTA6,i);PWM_Output(PWM_PIN_PTA7,0);
-                    PWM_Output(PWM_PIN_PTA9,i);PWM_Output(PWM_PIN_PTA8,0);
-                }
-                break;
-             case 5: //停止
-                  PWM_Output(PWM_PIN_PTA6,0);PWM_Output(PWM_PIN_PTA7,0);
-                  PWM_Output(PWM_PIN_PTA9,0);PWM_Output(PWM_PIN_PTA8,0);
         }
+        //go();//蓝牙控制车跑
+     }
+}
+
+void view(void)//上位机显示摄像头图片
+{
+    int  m=0,n=0;
+    //发送一帧数据
+    Uart_SendByte(UART4,0xFF);//图像头   
+    for(m=0; m<ROW; m++)
+    {
+      for(n=0;n<COL ;n++)
+      {
+         if(Pix_Data[m][n] == 0xFF) 
+           Pix_Data[m][n]--;
+         Uart_SendByte(UART4,Pix_Data[m][n]);
+      }
     }
 }
 
+void go(void)//蓝牙控制车跑
+{
+    int i = 0;
+    u8 temp;
+    //Uart_SendByte(UART4,Uart_Getch(UART4));  //测试串口
+    temp = Uart_Getch(UART4);//蓝牙遥控，程序会死在这里，接收到数据才执行
+    Uart_SendByte(UART4,temp);
+    temp -= 48;
+    switch(temp)
+    {
+        case 0: PWM_Output(PWM_PIN_PTA10,695);//中
+            break;
+        case 1: PWM_Output(PWM_PIN_PTA10,760);//左
+            break;
+        case 2: PWM_Output(PWM_PIN_PTA10,630);//右
+            break;
+        case 3: 
+            if(i <= 250)//加速
+            {
+                if(i < 250)
+                    i += 10;
+                else
+                    i = 250;
+                PWM_Output(PWM_PIN_PTA6,i);PWM_Output(PWM_PIN_PTA7,0);
+                PWM_Output(PWM_PIN_PTA9,i);PWM_Output(PWM_PIN_PTA8,0);
+            }
+            break;
+        case 4: 
+            if(i >= 0)//减速
+            {
+                if(i >= 50)
+                    i -= 10;
+                else
+                    i = 0;
+                PWM_Output(PWM_PIN_PTA6,i);PWM_Output(PWM_PIN_PTA7,0);
+                PWM_Output(PWM_PIN_PTA9,i);PWM_Output(PWM_PIN_PTA8,0);
+            }
+            break;
+         case 5: //停止
+              i = 0;
+              PWM_Output(PWM_PIN_PTA6,0);PWM_Output(PWM_PIN_PTA7,0);
+              PWM_Output(PWM_PIN_PTA9,0);PWM_Output(PWM_PIN_PTA8,0);
+    }
+}
 
 
 
