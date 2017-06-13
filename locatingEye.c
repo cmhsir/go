@@ -4,6 +4,7 @@ u8 Image_Sort_History[2][ROW][COL]={0};     // 图像数组
 u8 Image_Difference[2][ROW][COL]={0};       // 帧差数组
 //extern u8 Image_Difference_Result[ROW][COL];
 
+int Area = 0, X_axis = 0, Y_axis = 0;
 u16 Target_Count=0;
 u16 Found_Count,Lost_Count;
 u8 Frame_Threshold=60;//帧间阈值
@@ -54,6 +55,10 @@ void LocatingEye_OriginalImage_FixedThreshold_OledPrint()
   
   threshold= 240;      // 固定阈值分割
   
+  Area = 0;//面积的有效值
+  X_axis = 0;
+  Y_axis = 0;
+  
   for(i=0;i<ROW;i++)  
     for(j=0;j<COL;j++) 
     {
@@ -64,10 +69,16 @@ void LocatingEye_OriginalImage_FixedThreshold_OledPrint()
       else 
       {
         Image_Sort_History[1][i][j]=1;          // 大于阈值，信标，OLED显示置1
+        Area++;                                 //面积大小
+        X_axis += j;                            //x轴坐标
+        Y_axis += i;                            //y轴坐标
       }
-    }   
+    }
+  
+  X_axis = X_axis / Area;                       //取x轴在一帧画面的中心点 
+  Y_axis = Y_axis / Area;                       //取y轴在一帧画面的中心点
 
-    LCD_PrintImage((uint8 *)Image_Sort_History[1],ROW,COL);  //OLED显示图像
+    //LCD_PrintImage((uint8 *)Image_Sort_History[1],ROW,COL);  //OLED显示图像
 }
 
 
