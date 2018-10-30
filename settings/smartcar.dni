@@ -9,7 +9,15 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
+<<<<<<< HEAD
 Checksum=1566760749
+=======
+<<<<<<< HEAD
+Checksum=-840897070
+=======
+Checksum=-1968404704
+>>>>>>> 0bbc041506cd1da35f54924a6edd506d903fab64
+>>>>>>> 06a8d79eeefa28bd979699cddc6314d3239f9a1f
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -28,7 +36,14 @@ ActionState=1
 TraceBufferSize=0x00010000
 TraceStallIfFIFOFull=0x00000000
 TracePortSize=0x00000004
+<<<<<<< HEAD
 CStepIntDis=_ 0
+=======
+<<<<<<< HEAD
+CStepIntDis=_ 0
+=======
+>>>>>>> 0bbc041506cd1da35f54924a6edd506d903fab64
+>>>>>>> 06a8d79eeefa28bd979699cddc6314d3239f9a1f
 [PlDriver]
 MemConfigValue=C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\arm\CONFIG\debugger\Freescale\MK60DN512Zxxx10.ddf
 FirstRun=0
@@ -53,8 +68,41 @@ ItmLogPorts=0
 ItmLogFile=$PROJ_DIR$\ITM.log
 PowerForcePC=1
 PowerConnectPC=1
+<<<<<<< HEAD
 [CodeCoverage]
 Enabled=_ 0
+=======
+[InterruptLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[DataLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+[Interrupts]
+Enabled=1
+[MemConfig]
+Base=1
+Manual=0
+Ddf=1
+TypeViol=0
+Stop=1
+<<<<<<< HEAD
+=======
+[Trace1]
+Enabled=0
+ShowSource=1
+>>>>>>> 0bbc041506cd1da35f54924a6edd506d903fab64
+[Simulator]
+Freq=10000000
+MultiCoreRunAll=1
+>>>>>>> 06a8d79eeefa28bd979699cddc6314d3239f9a1f
 [Trace2]
 Enabled=0
 ShowSource=0
@@ -67,6 +115,7 @@ EventEXC=0
 EventFOLD=0
 EventLSU=0
 EventSLEEP=0
+<<<<<<< HEAD
 [InterruptLog]
 LogEnabled=0
 SumEnabled=0
@@ -91,6 +140,10 @@ Stop=1
 [Simulator]
 Freq=10000000
 MultiCoreRunAll=1
+=======
+[CodeCoverage]
+Enabled=_ 0
+>>>>>>> 06a8d79eeefa28bd979699cddc6314d3239f9a1f
 [Trace1]
 Enabled=0
 ShowSource=1
