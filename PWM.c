@@ -492,9 +492,9 @@ void PWM_Output(U8 ucPin, U16 ucDuty)
     }
     if(ucPin==PWM_PIN_PTA10)
     {
-          if (ucDuty >= 2499)//mod   //修改周期。5.12ms
+          if (ucDuty >= 4999)//mod   //修改周期。5.12ms
         {
-            FTM_CnV_REG(pstFTMModule,ucFTMCh) = 2499;  //修改周期。5.12ms
+            FTM_CnV_REG(pstFTMModule,ucFTMCh) = 4999;  //修改周期。5.12ms
         }
         
         else

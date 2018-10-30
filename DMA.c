@@ -44,7 +44,7 @@ void DMA_transmit_init(void *SADDR, void *DADDR,uint32 count,uint8 source)
        
        DMA_ERQ |= DMA_ERQ_ERQ1_MASK;          //使能通道1的服务请求
        
-       //set_irq_priority (63, 0);              //设置中断优先级
+       //set_irq_priority (1, 0);              //设置中断优先级
        DMA_EN(DMA_CH1);
        
        enable_irq(1);                        //开DMA通道1主循环结束中断  
@@ -53,7 +53,7 @@ void DMA_transmit_init(void *SADDR, void *DADDR,uint32 count,uint8 source)
 
 
 /*************************************************************************
-*                             野火嵌入式开发工作室
+*                             极之队
 *
 *  函数名称：DMA_count_Init
 *  功能说明：DMA累加计数初始化
