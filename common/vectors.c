@@ -1,6 +1,5 @@
 #include "..\K60_datatype.h"    //这个K60_datatype.h文件前加个。。\干嘛？
 extern  u8  Image_Sort_History[3][ROW][COL];
-
 /***GBL+**********************************************************************/
 /* Vectors table address.                                                    */
 /***GBL-**********************************************************************/
@@ -166,7 +165,6 @@ void disable_irq (INT irq)
               break;
     }              
 }
-#if 0
 /***FUNC+*********************************************************************/
 /* Name   : set_irq_priority                                                 */
 /* Descrp : Initialize the NVIC to set specified IRQ priority.               */
@@ -186,21 +184,20 @@ void set_irq_priority (INT irq, INT prio)
      */
     if (irq > MAX_IRQ_NUM)
     {
-        printf("\nERR! Invalid IRQ value passed to priority irq function!\n");
+        irq = 91;
     }
 
     if (prio > 15)
     {
-        printf("\nERR! Invalid priority value passed to priority irq function!\n");
+        prio = 15;
     }
     
     /* Determine which of the NVICIPx corresponds to the irq */
     prio_reg = (uint8 *)(((uint32)&NVICIP0) + irq);
 
     /* Assign priority to IRQ */
-    *prio_reg = ( (prio&0xF) << (8 - ARM_INTERRUPT_LEVEL_BITS) );             
+    *prio_reg = ( (prio&0xF) << 4 );             
 }
-#endif
 /***FUNC+*********************************************************************/
 /* Name   : Vector Table                                                     */
 /* Descrp : struct Vector Table                                              */
@@ -501,15 +498,6 @@ void DummyISR(void)
 }
 
 
-//PIT中断服务函数
-void Timer0_isr()
-{
-        
-  CLR_PIT0;
-   
-  PIT_TCTRL0 |= PIT_TCTRL_TEN_MASK; //计时器使能
-}
-
 void DMA_CH1_Handler()
 {
     DMA_IRQ_CLEAN(DMA_CH1);  //清除通道传输中断标志位(这样才能再次进入中断)
@@ -561,7 +549,7 @@ void PORTC_Interrupt()
       PORTC_ISFR |= (1 << 17);//写1清中断标志位 
       Is_SendPhoto = 0;  //发送图像标志，串口调试要用
       DMA_TCD1_DADDR = (u32)Image_Sort_History[0];                
-      V_Cnt=0;    //行采集计数清零                                           
+      V_Cnt=0;    //行采集计数清零
       Is_SendPhoto = 0; //发送图像标志                                   
     }
    

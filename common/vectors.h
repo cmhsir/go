@@ -126,7 +126,7 @@ typedef void pointer(void);
 
 #define VECTOR_084      Timer0_isr     // 0x0000_0150 84    68     PIT Channel 0
 
-#define VECTOR_085      default_isr     // 0x0000_0154 85    69     PIT Channel 1
+#define VECTOR_085      Timer1_isr     // 0x0000_0154 85    69     PIT Channel 1
 #define VECTOR_086      default_isr     // 0x0000_0158 86    70     PIT Channel 2
 #define VECTOR_087      default_isr     // 0x0000_015C 87    71     PIT Channel 3
 #define VECTOR_088      default_isr     // 0x0000_0160 88    72     PDB
