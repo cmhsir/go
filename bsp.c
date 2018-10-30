@@ -1,5 +1,6 @@
 #include "K60_datatype.h"
 extern  u8  Image_Sort_History[3][ROW][COL];
+u32 time = 9000000;//延时启动
 void BSP_init()
 {
     WatchdogDisable();  //看门狗
@@ -23,7 +24,29 @@ void BSP_init()
     PWM_Init(PWM_PIN_PTA7,PWM_FRE_DIV_FACTOR_64,0);//电机反1
     PWM_Init(PWM_PIN_PTA8,PWM_FRE_DIV_FACTOR_64,0);//电机正2
     PWM_Init(PWM_PIN_PTA9,PWM_FRE_DIV_FACTOR_64,0);//电机反2
-    PWM_Output(PWM_PIN_PTA10,695);//对中692，小右，大左，左满750，右满630，左右各差55
+    PWM_Output(PWM_PIN_PTA10,680);//对中692，小右，大左，左满750，右满630，左右各差55
+    
+    //初始化编码器引脚以及DMA，注意每一个引脚通道只能使用一次，这里使用的是四个不同的GPIO通道，四路检测和输出
+    Gpio_init(PORT_A, 5, 0, 0);//初始化引脚
+    Gpio_init(PORT_B, 9, 0, 0);
+//    Gpio_init(PORT_D, 9, 0, 0);
+//    Gpio_init(PORT_E, 9, 0, 0);
+    DMA_count_Init(DMA_CH2, PTA5, 0x7FFF, DMA_rising_up);//通道DMA2，引脚A5，计数最大值为0x7FFF，上升沿触发且源地址IO端口内部上拉
+    DMA_count_Init(DMA_CH3, PTB9, 0x7FFF, DMA_rising_up);//通道DMA3，引脚B9，计数最大值为0x7FFF，上升沿触发且源地址IO端口内部上拉
+//    DMA_count_Init(DMA_CH4, PTD9, 0x7FFF, DMA_rising_up);//通道DMA4，引脚D9，计数最大值为0x7FFF，上升沿触发且源地址IO端口内部上拉
+//    DMA_count_Init(DMA_CH5, PTE9, 0x7FFF, DMA_rising_up);//通道DMA5，引脚E9，计数最大值为0x7FFF，上升沿触发且源地址IO端口内部上拉
+    //count = DMA_count_get(DMA_CHn)获取通道n的脉冲次数
+    
+    //初始化拨码开关
+    Gpio_init(PORT_B, 0, 0, 0);
+    Gpio_init(PORT_B, 1, 0, 0);
+    Gpio_init(PORT_B, 2, 0, 0);
+    Gpio_init(PORT_B, 3, 0, 0);
+    Gpio_init(PORT_B, 4, 0, 0);
+    
+    
+    //初始化光电开关管
+    Gpio_init(PORT_C, 3, 0, 1);
     
     //OLED初始化
     OLED_Init();
@@ -33,7 +56,9 @@ void BSP_init()
     LED_Fill(0x00);
     
     //OLED显示图片
-    //LED_PrintBMP(0,0,127,7,logo);
+    LED_PrintBMP(0,0,127,7,logo);
+    LED_P14x16Str(18,0,"辽科大极之队");
+    while(time--);
   
     //----------SCCB寄存器配置---------------//
     //sccb_regWrite(0x42,0x11,0x03);      //地址0X11-中断四分频(640*240)           PCLK:166ns   HREF:254.6us   VSYN:133.6ms
@@ -56,6 +81,7 @@ void BSP_init()
     Gpio_init(PORT_C,18,0,0);  // PCLK
     Gpio_init(PORT_C,17,0,0);  // VSYN
     Gpio_init(PORT_C,16,0,0);  // HREF
+    Gpio_init(PORT_B,7,1,0);   // res
     PORTC_PCR18|=PORT_PCR_IRQC(1);   
     //DMA_transmit_init((void *)&GPIOD_PDIR, Pix_Data,COL,51);//使用上位机显示时解除此屏蔽
     DMA_transmit_init((void *)&GPIOD_PDIR, Image_Sort_History[0],COL,51);
