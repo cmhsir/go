@@ -58,7 +58,7 @@
 
 // f[sys]=48M, f[PWM]=48K
 #define PWM_FRE_FACTOR               249 
-#define PWM_FRE_FACTOR1               2499 //修改周期。5.12ms
+#define PWM_FRE_FACTOR1               4999 //修改周期。5.12ms
 // f[PWM] = (f[sys]/PWM_FRE_DIV_FACTOR)/(PWM_FRE_FACTOR+1)=96MHZ/2/250          
 // PWM_FRE_FACTOR = f[sys]/PWM_FRE_DIV_FACTOR/f[PWM]-1
 
