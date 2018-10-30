@@ -9,7 +9,19 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
+<<<<<<< HEAD
 Checksum=426088000
+=======
+<<<<<<< HEAD
+Checksum=1566760749
+=======
+<<<<<<< HEAD
+Checksum=-840897070
+=======
+Checksum=-1968404704
+>>>>>>> 0bbc041506cd1da35f54924a6edd506d903fab64
+>>>>>>> 06a8d79eeefa28bd979699cddc6314d3239f9a1f
+>>>>>>> ea795226d5a6285dcc1d64d20c7447dd0387f0c0
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -28,7 +40,18 @@ ActionState=1
 TraceBufferSize=0x00010000
 TraceStallIfFIFOFull=0x00000000
 TracePortSize=0x00000004
+<<<<<<< HEAD
 CStepIntDis=_ 0
+=======
+<<<<<<< HEAD
+CStepIntDis=_ 0
+=======
+<<<<<<< HEAD
+CStepIntDis=_ 0
+=======
+>>>>>>> 0bbc041506cd1da35f54924a6edd506d903fab64
+>>>>>>> 06a8d79eeefa28bd979699cddc6314d3239f9a1f
+>>>>>>> ea795226d5a6285dcc1d64d20c7447dd0387f0c0
 [PlDriver]
 MemConfigValue=C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\arm\CONFIG\debugger\Freescale\MK60DN512Zxxx10.ddf
 FirstRun=0
@@ -53,8 +76,28 @@ ItmLogPorts=0
 ItmLogFile=$PROJ_DIR$\ITM.log
 PowerForcePC=1
 PowerConnectPC=1
+<<<<<<< HEAD
 [CodeCoverage]
 Enabled=_ 0
+=======
+<<<<<<< HEAD
+[CodeCoverage]
+Enabled=_ 0
+=======
+[InterruptLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+SumSortOrder=0
+[DataLog]
+LogEnabled=0
+SumEnabled=0
+GraphEnabled=0
+ShowTimeLog=1
+ShowTimeSum=1
+>>>>>>> ea795226d5a6285dcc1d64d20c7447dd0387f0c0
 [Interrupts]
 Enabled=1
 [MemConfig]
@@ -63,6 +106,7 @@ Manual=0
 Ddf=1
 TypeViol=0
 Stop=1
+<<<<<<< HEAD
 [Simulator]
 Freq=10000000
 MultiCoreRunAll=1
@@ -83,6 +127,18 @@ ITMportsEnable=0
 ITMportsTermIO=0
 ITMportsLogFile=0
 ITMlogFile=$PROJ_DIR$\ITM.log
+=======
+<<<<<<< HEAD
+=======
+[Trace1]
+Enabled=0
+ShowSource=1
+>>>>>>> 0bbc041506cd1da35f54924a6edd506d903fab64
+[Simulator]
+Freq=10000000
+MultiCoreRunAll=1
+>>>>>>> 06a8d79eeefa28bd979699cddc6314d3239f9a1f
+>>>>>>> ea795226d5a6285dcc1d64d20c7447dd0387f0c0
 [Trace2]
 Enabled=0
 ShowSource=0
@@ -95,6 +151,7 @@ EventEXC=0
 EventFOLD=0
 EventLSU=0
 EventSLEEP=0
+<<<<<<< HEAD
 [PowerLog]
 LogEnabled=0
 GraphEnabled=0
@@ -111,23 +168,49 @@ GraphEnabled=0
 ShowTimeLog=1
 ShowTimeSum=1
 [EventLog]
+=======
+<<<<<<< HEAD
+[InterruptLog]
+>>>>>>> ea795226d5a6285dcc1d64d20c7447dd0387f0c0
 LogEnabled=0
 SumEnabled=0
 GraphEnabled=0
 ShowTimeLog=1
 ShowTimeSum=1
 SumSortOrder=0
+<<<<<<< HEAD
 [InterruptLog]
+=======
+[DataLog]
+>>>>>>> ea795226d5a6285dcc1d64d20c7447dd0387f0c0
 LogEnabled=0
 SumEnabled=0
 GraphEnabled=0
 ShowTimeLog=1
 ShowTimeSum=1
+<<<<<<< HEAD
 SumSortOrder=0
 [PowerProbe]
 Frequency=10000
 Probe0=I0
 ProbeSetup0=2 1 1 2 0 0
+=======
+[Interrupts]
+Enabled=1
+[MemConfig]
+Base=1
+Manual=0
+Ddf=1
+TypeViol=0
+Stop=1
+[Simulator]
+Freq=10000000
+MultiCoreRunAll=1
+=======
+[CodeCoverage]
+Enabled=_ 0
+>>>>>>> 06a8d79eeefa28bd979699cddc6314d3239f9a1f
+>>>>>>> ea795226d5a6285dcc1d64d20c7447dd0387f0c0
 [Trace1]
 Enabled=0
 ShowSource=1
@@ -163,6 +246,10 @@ A8=_ "D:\·ÉË¼¿¨¶û\go Ë«µç»ú\exti.c" ""
 A9=_ "D:\·ÉË¼¿¨¶û\go\DMA.c" ""
 A10=_ "D:\·ÉË¼¿¨¶û\go\exti.c" ""
 A11=_ "D:\·ÉË¼¿¨¶û\go\go\common\crt0.s" ""
+<<<<<<< HEAD
 A12=_ "E:\·ÉË¼¿¨¶û\go\main.c" ""
 Count=13
+=======
+Count=12
+>>>>>>> ea795226d5a6285dcc1d64d20c7447dd0387f0c0
 SuppressDialog=1

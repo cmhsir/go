@@ -198,8 +198,18 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\arm\inc\c
 -D__HAS_LOCATED_WITH_INIT__=1
 -D__IAR_COMPILERBASE__=594179
 -D_GOANNA=1
+<<<<<<< HEAD
 -D__DATE__="Jul 18 2017"
 -D__TIME__="04:28:15"
+=======
+<<<<<<< HEAD
+-D__DATE__="Jul  8 2017"
+-D__TIME__="15:50:56"
+=======
+-D__DATE__="Jun 18 2017"
+-D__TIME__="18:14:29"
+>>>>>>> 06a8d79eeefa28bd979699cddc6314d3239f9a1f
+>>>>>>> ea795226d5a6285dcc1d64d20c7447dd0387f0c0
 -D__STDC__=1
 -D__STDC_VERSION__=199901L
 -D__STDC_HOSTED__=1
