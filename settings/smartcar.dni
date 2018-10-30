@@ -9,7 +9,11 @@ TriggerName=main
 LimitSize=0
 ByteLimit=50
 [DebugChecksum]
+<<<<<<< HEAD
 Checksum=-840897070
+=======
+Checksum=-1968404704
+>>>>>>> 0bbc041506cd1da35f54924a6edd506d903fab64
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0
@@ -28,7 +32,10 @@ ActionState=1
 TraceBufferSize=0x00010000
 TraceStallIfFIFOFull=0x00000000
 TracePortSize=0x00000004
+<<<<<<< HEAD
 CStepIntDis=_ 0
+=======
+>>>>>>> 0bbc041506cd1da35f54924a6edd506d903fab64
 [PlDriver]
 MemConfigValue=C:\Program Files (x86)\IAR Systems\Embedded Workbench 7.0\arm\CONFIG\debugger\Freescale\MK60DN512Zxxx10.ddf
 FirstRun=0
@@ -74,6 +81,12 @@ Manual=0
 Ddf=1
 TypeViol=0
 Stop=1
+<<<<<<< HEAD
+=======
+[Trace1]
+Enabled=0
+ShowSource=1
+>>>>>>> 0bbc041506cd1da35f54924a6edd506d903fab64
 [Simulator]
 Freq=10000000
 MultiCoreRunAll=1
